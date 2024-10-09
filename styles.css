@@ -73,28 +73,15 @@ body.dark-mode .hero {
     text-align: center;
 }
 
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Experience Section */
 #experience {
     padding: 40px;
+    text-align: center;
 }
 
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Matching size with project cards */
     gap: 20px;
 }
 
@@ -105,30 +92,16 @@ body.dark-mode .hero {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.read-more {
-    background-color: #0073e6;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.read-more:hover {
-    background-color: #005bb5;
-}
-
 /* Projects Section */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller project cards */
     gap: 20px;
 }
 
 .project-card {
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
