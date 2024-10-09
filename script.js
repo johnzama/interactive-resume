@@ -60,3 +60,39 @@ function fetchGitHubRepos() {
 // Call the function to load projects
 fetchGitHubRepos();
 
+// Skills Chart using Chart.js
+const ctx = document.getElementById('skillsChart').getContext('2d');
+const skillsChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ['Docker', 'Git', 'Kubernetes', 'Jenkins', 'Terraform', 'AWS', 'Linux'],
+        datasets: [{
+            label: 'Skill Level',
+            data: [90, 85, 75, 80, 75, 85, 85],
+            backgroundColor: 'rgba(0, 123, 255, 0.2)',
+            borderColor: '#007bff',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scale: {
+            ticks: { beginAtZero: true }
+        }
+    }
+});
+
+// Show/hide scroll-to-top button
+window.addEventListener('scroll', () => {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
