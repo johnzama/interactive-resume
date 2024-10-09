@@ -18,20 +18,6 @@ window.onload = function() {
     }
 }
 
-// Toggle job details visibility
-document.querySelectorAll('.read-more').forEach(button => {
-    button.addEventListener('click', function() {
-        const details = this.previousElementSibling;
-        if (details.style.display === 'none') {
-            details.style.display = 'block';
-            this.textContent = 'Read Less';
-        } else {
-            details.style.display = 'none';
-            this.textContent = 'Read More';
-        }
-    });
-});
-
 // Fetch GitHub repositories
 function fetchGitHubRepos() {
     const username = "johnzama"; // Replace with your GitHub username
